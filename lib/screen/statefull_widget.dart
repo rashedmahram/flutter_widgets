@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'bottom_navigation/navigations.dart';
+import 'drawer/drawer.dart';
 import 'navigation/about_us.dart';
 import 'navigation/article_page.dart';
 import 'navigation/contact.dart';
@@ -85,61 +86,74 @@ class _MainPageState extends State<MainPage> {
           ),
         ),
         Expanded(
-            flex: 1,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => AboutUs(),
-                        ),
-                      );
-                    },
-                    child: Text("About Us")),
-                TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Contacts(),
-                        ),
-                      );
-                    },
-                    child: Text("Contact Us")),
-                TextButton(
-                    onPressed: () {
-                      Map article = {
-                        'auther': "Rasheed Muharram",
-                        "title": 'Intro To Flutter',
-                        'content':
-                            'These routes must be predefined. Although you can pass arguments to a named route, you can’t parse arguments from the route itself. For example, if the app is run on the web, you can’t parse the ID from a route like',
-                        "createdDate": '02/03/2039',
-                      };
-
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Articles(
-                            article: article,
+            flex: 3,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DrawerEx(),
                           ),
-                        ),
-                      );
-                    },
-                    child: Text("Article")),
-                TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => BottomNavEx(),
-                        ),
-                      );
-                    },
-                    child: Text("Bottom Nav")),
-              ],
+                        );
+                      },
+                      child: Text("Side Menu")),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AboutUs(),
+                          ),
+                        );
+                      },
+                      child: Text("About Us")),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Contacts(),
+                          ),
+                        );
+                      },
+                      child: Text("Contact Us")),
+                  TextButton(
+                      onPressed: () {
+                        Map article = {
+                          'auther': "Rasheed Muharram",
+                          "title": 'Intro To Flutter',
+                          'content':
+                              'These routes must be predefined. Although you can pass arguments to a named route, you can’t parse arguments from the route itself. For example, if the app is run on the web, you can’t parse the ID from a route like',
+                          "createdDate": '02/03/2039',
+                        };
+
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Articles(
+                              article: article,
+                            ),
+                          ),
+                        );
+                      },
+                      child: Text("Article")),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BottomNavEx(),
+                          ),
+                        );
+                      },
+                      child: Text("Bottom Nav")),
+                ],
+              ),
             ))
       ],
     );
