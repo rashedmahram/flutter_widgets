@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screen/statefull_widget.dart';
+import 'widgets/grid.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Widgets',
       home: Scaffold(
         body: SafeArea(
-          child: MainPage(),
+          child: GridLayout(),
         ),
       ),
     );
