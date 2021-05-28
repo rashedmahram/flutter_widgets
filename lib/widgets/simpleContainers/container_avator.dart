@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../grid.dart';
+import '../gridview.dart';
 
 // ignore: must_be_immutable
 class ContainerLayout extends StatelessWidget {
@@ -14,10 +14,7 @@ class ContainerLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // !Container: Adds padding, margins, borders, background color, or other decorations to a widget.
-    // ? padding [X]
-    // ? margins [X]
-    // ? background color [X]
-    // ? decorations [ ]
+
     double height = MediaQuery.of(context).size.height * 0.21;
     double width = MediaQuery.of(context).size.width * 0.3;
 

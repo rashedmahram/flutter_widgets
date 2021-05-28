@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/grid.dart';
+import 'widgets/gridview.dart';
 
 void main() => runApp(MyApp());
 
