@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/screen/about_us.dart';
 
-import 'article_page.dart';
-import 'contact.dart';
+import 'bottom_navigation/navigations.dart';
+import 'navigation/about_us.dart';
+import 'navigation/article_page.dart';
+import 'navigation/contact.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -38,7 +39,7 @@ class _MainPageState extends State<MainPage> {
               TextButton(
                 onPressed: () {
                   setState(() {
-                    color = Colors.green[400];
+                    color = Colors.green[400]!;
                   });
                 },
                 child: Text("Green"),
@@ -53,7 +54,7 @@ class _MainPageState extends State<MainPage> {
               TextButton(
                 onPressed: () {
                   setState(() {
-                    color = Colors.yellow[400];
+                    color = Colors.yellow[400]!;
                   });
                 },
                 child: Text("yellow"),
@@ -68,7 +69,7 @@ class _MainPageState extends State<MainPage> {
               TextButton(
                 onPressed: () {
                   setState(() {
-                    color = Colors.red[400];
+                    color = Colors.red[400]!;
                   });
                 },
                 child: Text("Red"),
@@ -128,6 +129,16 @@ class _MainPageState extends State<MainPage> {
                       );
                     },
                     child: Text("Article")),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => BottomNavEx(),
+                        ),
+                      );
+                    },
+                    child: Text("Bottom Nav")),
               ],
             ))
       ],

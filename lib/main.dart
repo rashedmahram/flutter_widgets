@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/screen/statefull_widget.dart';
+
+import 'screen/statefull_widget.dart';
 
 void main() => runApp(MyApp());
 
