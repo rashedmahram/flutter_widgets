@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/todo_app/contstans.dart';
-import 'package:flutter_widgets/todo_app/widgets/add_dialog_widget.dart';
-import 'package:flutter_widgets/todo_app/widgets/todo_list_widget.dart';
+import '../contstans.dart';
+import '../widgets/add_dialog_widget.dart';
+import '../widgets/todo_list_widget.dart';
 
 class HomePage extends StatefulWidget {
   @override

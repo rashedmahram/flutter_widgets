@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/todo_app/contstans.dart';
-import 'package:flutter_widgets/todo_app/screen/home_screen.dart';
-import 'package:flutter_widgets/todo_app/core/provider/todos.dart';
 import 'package:provider/provider.dart';
+
+import 'contstans.dart';
+import 'core/provider/todos.dart';
+import 'screen/home_screen.dart';
 
 void main() => runApp(MyApp());
 

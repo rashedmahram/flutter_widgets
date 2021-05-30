@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/todo_app/widgets/todo_form_widget.dart';
+
+import 'todo_form_widget.dart';
 
 class AddTodoDialogWidget extends StatefulWidget {
   @override
