@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/gridview.dart';
+import 'main_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,15 +8,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Widgets',
+      title: 'Provider',
       home: Scaffold(
-        body: SafeArea(
-          child: GridLayout(),
-        ),
+        body: MarketMainPage(),
       ),
     );
   }
 }
-
-
